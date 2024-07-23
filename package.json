@@ -1,10 +1,10 @@
 {
-  "name": "multi-serve",
+  "name": "spfx-multi-serve",
   "version": "0.0.1",
   "description": "Serve multiple SFPx projects by combined manifest file",
   "main": "index.js",
   "bin": {
-    "multi-serve": "lib/index.js"
+    "spfx-multi-serve": "lib/index.js"
   },
   "scripts": {
     "build": "node esbuild.config.js"
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Czesio196/multi-serve.git"
   },
   "devDependencies": {
     "esbuild": "0.23.0",
