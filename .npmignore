@@ -1,0 +1,7 @@
+node_modules
+certificates
+temp
+src
+.gitignore
+.prettierrc
+esbuild.config.js

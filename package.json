@@ -1,0 +1,40 @@
+{
+  "name": "multi-serve",
+  "version": "0.0.1",
+  "description": "Serve multiple SFPx projects by combined manifest file",
+  "main": "index.js",
+  "bin": {
+    "multi-serve": "lib/index.js"
+  },
+  "scripts": {
+    "build": "node esbuild.config.js"
+  },
+  "dependencies": {
+    "colors": "1.4.0",
+    "commander": "11.1.0",
+    "https": "1.0.0",
+    "node-fetch": "2.7.0",
+    "sandboxed-module": "2.0.4",
+    "selfsigned": "2.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "esbuild": "0.23.0",
+    "esbuild-plugin-copy": "2.1.1"
+  },
+  "keywords": [
+    "SPFx",
+    "manifest",
+    "SharePoint",
+    "serve",
+    "multiple",
+    "sppkg",
+    "cli",
+    "debug"
+  ],
+  "author": "",
+  "license": "MIT"
+}
