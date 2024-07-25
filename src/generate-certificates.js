@@ -20,4 +20,7 @@ export const generateCertificates = () => {
 
     fs.writeFileSync(path.join(dirPath, 'server.key'), pems.private);
     fs.writeFileSync(path.join(dirPath, 'server.cert'), pems.cert);
+
+    console.log(path.join(dirPath, 'server.key'));
+    console.log(path.join(dirPath, 'server.cert'));
 };

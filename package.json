@@ -1,6 +1,6 @@
 {
   "name": "spfx-multi-serve",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Serve multiple SFPx projects by combined manifest file",
   "main": "index.js",
   "bin": {

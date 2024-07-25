@@ -175,15 +175,8 @@ const readFile = (filePath) => {
     });
 };
 
-const saveToFile = (filePath, content, compress = false) => {
+const saveToFile = (filePath, content) => {
     return new Promise((resolve, reject) => {
-        if (compress) {
-            content = content
-                .replace(/\/\*[\s\S]*?\*\/|\/\/.*/g, '')
-                .replace(/\s{2,}/g, ' ')
-                .replace(/\n\s*/g, '');
-        }
-
         fs.writeFile(filePath, content, 'utf8', (err) => {
             if (err) {
                 reject(err);
@@ -265,7 +258,7 @@ const prepareManifestToServce = async (ports) => {
     templateContent = templateContent.replace(__manifestPlaceholder, JSON.stringify(uniqueCompontents));
 
     fs.mkdirSync(__manifestOutputTempPath, { recursive: true });
-    await saveToFile(__manifestOutputPath, templateContent, true);
+    await saveToFile(__manifestOutputPath, templateContent);
 };
 
 const serveMultiple = async (servePort, targetPorst) => {
@@ -365,7 +358,7 @@ program.command('certificates').description('Generate certificates').action(gene
 
 const serveCommand = program
     .command('serve')
-    .option('-p, --port <port>', 'HTTPS port to use for serving the manifest', portParse, 4321)
+    .option('-p, --port <port>', 'HTTPS port to use for serving the manifest', portParse)
     .option(
         '-t, --targets <targets>',
         'Separate the original HTTP SPFx ports with a comma. For example: -t 1234,2345,3456',
