@@ -40,7 +40,7 @@ The spfx-multi-serve is a CLI tool designed to serve multiple SPFx manifest file
 | option         | type    | defaults | description                                                                          |
 | -------------- | ------- | -------- | ------------------------------------------------------------------------------------ |
 | `-p --port`    | integer | 9876     | HTTPS port to use for serving the manifest.                                          |
-| `-t --targers` | string  | -        | Separate the original HTTP SPFx ports with a comma. For example: `-t 1234,2345,3456` |
+| `-t --targets` | string  | -        | Separate the original HTTP SPFx ports with a comma. For example: `-t 1234,2345,3456` |
 
 ## Important Notice
 
